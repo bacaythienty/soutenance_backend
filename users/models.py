@@ -1,5 +1,3 @@
-
-
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -16,7 +14,7 @@ class User(AbstractUser):
         return f"{self.username} ({self.role})"
 
 
-# class PatientProfile(models.Model):
+class PatientProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='patient_profile')
     date_naissance = models.DateField(null=True, blank=True)
     sexe = models.CharField(max_length=10, blank=True)
