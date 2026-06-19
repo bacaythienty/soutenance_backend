@@ -4,10 +4,10 @@ from .models import RendezVous, Notification
 class RendezVousSerializer(serializers.ModelSerializer):
     class Meta:
         model = RendezVous
-        fields = '_all_'
+        fields = '__all__'
         read_only_fields = ['patient', 'statut', 'date_creation']
 
 class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notification
-        fields = '_all_'
+        fields = '__all__'
